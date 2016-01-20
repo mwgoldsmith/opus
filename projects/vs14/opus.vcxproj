@@ -206,16 +206,25 @@ IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
 )</Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>MKDIR "$(OutDir)..\..\include"
+      <Command>
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"
+ECHO Off
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
 MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
-COPY "$(ProjectDir)..\..\include\opus\opus.h" "$(OutDir)..\..\include\$(ProjectName)"
-COPY "$(ProjectDir)..\..\include\opus\opus_defines.h" "$(OutDir)..\..\include\$(ProjectName)"
-COPY "$(ProjectDir)..\..\include\opus\opus_multistream.h" "$(OutDir)..\..\include\$(ProjectName)"
-COPY "$(ProjectDir)..\..\include\opus\opus_types.h" "$(OutDir)..\..\include\$(ProjectName)"
+FOR %%H IN (opus.h opus_defines.h opus_multistream.h opus_types.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)..\..\include\$(ProjectName)\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
 
 MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</Command>
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -244,16 +253,25 @@ IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
 )</Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>MKDIR "$(OutDir)..\..\include"
+      <Command>
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"
+ECHO Off
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
 MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
-COPY "$(ProjectDir)..\..\include\opus\opus.h" "$(OutDir)..\..\include\$(ProjectName)"
-COPY "$(ProjectDir)..\..\include\opus\opus_defines.h" "$(OutDir)..\..\include\$(ProjectName)"
-COPY "$(ProjectDir)..\..\include\opus\opus_multistream.h" "$(OutDir)..\..\include\$(ProjectName)"
-COPY "$(ProjectDir)..\..\include\opus\opus_types.h" "$(OutDir)..\..\include\$(ProjectName)"
+FOR %%H IN (opus.h opus_defines.h opus_multistream.h opus_types.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)..\..\include\$(ProjectName)\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
 
 MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</Command>
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -285,16 +303,25 @@ IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
 )</Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>MKDIR "$(OutDir)..\..\include"
+      <Command>
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"
+ECHO Off
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
 MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
-COPY "$(ProjectDir)..\..\include\opus\opus.h" "$(OutDir)..\..\include\$(ProjectName)"
-COPY "$(ProjectDir)..\..\include\opus\opus_defines.h" "$(OutDir)..\..\include\$(ProjectName)"
-COPY "$(ProjectDir)..\..\include\opus\opus_multistream.h" "$(OutDir)..\..\include\$(ProjectName)"
-COPY "$(ProjectDir)..\..\include\opus\opus_types.h" "$(OutDir)..\..\include\$(ProjectName)"
+FOR %%H IN (opus.h opus_defines.h opus_multistream.h opus_types.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)..\..\include\$(ProjectName)\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
 
 MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</Command>
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -325,16 +352,25 @@ IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
 )</Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>MKDIR "$(OutDir)..\..\include"
+      <Command>
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"
+ECHO Off
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
 MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
-COPY "$(ProjectDir)..\..\include\opus\opus.h" "$(OutDir)..\..\include\$(ProjectName)"
-COPY "$(ProjectDir)..\..\include\opus\opus_defines.h" "$(OutDir)..\..\include\$(ProjectName)"
-COPY "$(ProjectDir)..\..\include\opus\opus_multistream.h" "$(OutDir)..\..\include\$(ProjectName)"
-COPY "$(ProjectDir)..\..\include\opus\opus_types.h" "$(OutDir)..\..\include\$(ProjectName)"
+FOR %%H IN (opus.h opus_defines.h opus_multistream.h opus_types.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)..\..\include\$(ProjectName)\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
 
 MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</Command>
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
@@ -371,16 +407,25 @@ IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
 )</Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>MKDIR "$(OutDir)..\..\include"
+      <Command>
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"
+ECHO Off
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
 MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
-COPY "$(ProjectDir)..\..\include\opus\opus.h" "$(OutDir)..\..\include\$(ProjectName)"
-COPY "$(ProjectDir)..\..\include\opus\opus_defines.h" "$(OutDir)..\..\include\$(ProjectName)"
-COPY "$(ProjectDir)..\..\include\opus\opus_multistream.h" "$(OutDir)..\..\include\$(ProjectName)"
-COPY "$(ProjectDir)..\..\include\opus\opus_types.h" "$(OutDir)..\..\include\$(ProjectName)"
+FOR %%H IN (opus.h opus_defines.h opus_multistream.h opus_types.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)..\..\include\$(ProjectName)\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
 
 MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</Command>
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
@@ -414,16 +459,25 @@ IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
 )</Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>MKDIR "$(OutDir)..\..\include"
+      <Command>
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"
+ECHO Off
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
 MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
-COPY "$(ProjectDir)..\..\include\opus\opus.h" "$(OutDir)..\..\include\$(ProjectName)"
-COPY "$(ProjectDir)..\..\include\opus\opus_defines.h" "$(OutDir)..\..\include\$(ProjectName)"
-COPY "$(ProjectDir)..\..\include\opus\opus_multistream.h" "$(OutDir)..\..\include\$(ProjectName)"
-COPY "$(ProjectDir)..\..\include\opus\opus_types.h" "$(OutDir)..\..\include\$(ProjectName)"
+FOR %%H IN (opus.h opus_defines.h opus_multistream.h opus_types.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)..\..\include\$(ProjectName)\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
 
 MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</Command>
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
@@ -462,16 +516,25 @@ IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
 )</Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>MKDIR "$(OutDir)..\..\include"
+      <Command>
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"
+ECHO Off
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
 MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
-COPY "$(ProjectDir)..\..\include\opus\opus.h" "$(OutDir)..\..\include\$(ProjectName)"
-COPY "$(ProjectDir)..\..\include\opus\opus_defines.h" "$(OutDir)..\..\include\$(ProjectName)"
-COPY "$(ProjectDir)..\..\include\opus\opus_multistream.h" "$(OutDir)..\..\include\$(ProjectName)"
-COPY "$(ProjectDir)..\..\include\opus\opus_types.h" "$(OutDir)..\..\include\$(ProjectName)"
+FOR %%H IN (opus.h opus_defines.h opus_multistream.h opus_types.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)..\..\include\$(ProjectName)\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
 
 MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</Command>
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
@@ -509,16 +572,25 @@ IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
 )</Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>MKDIR "$(OutDir)..\..\include"
+      <Command>
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"
+ECHO Off
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
 MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
-COPY "$(ProjectDir)..\..\include\opus\opus.h" "$(OutDir)..\..\include\$(ProjectName)"
-COPY "$(ProjectDir)..\..\include\opus\opus_defines.h" "$(OutDir)..\..\include\$(ProjectName)"
-COPY "$(ProjectDir)..\..\include\opus\opus_multistream.h" "$(OutDir)..\..\include\$(ProjectName)"
-COPY "$(ProjectDir)..\..\include\opus\opus_types.h" "$(OutDir)..\..\include\$(ProjectName)"
+FOR %%H IN (opus.h opus_defines.h opus_multistream.h opus_types.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)..\..\include\$(ProjectName)\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
 
 MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"</Command>
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
