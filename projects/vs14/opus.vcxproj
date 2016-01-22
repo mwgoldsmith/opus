@@ -207,8 +207,6 @@ IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
-MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"
 ECHO Off
 SETLOCAL EnableDelayedExpansion EnableExtensions
 
@@ -254,8 +252,6 @@ IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
-MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"
 ECHO Off
 SETLOCAL EnableDelayedExpansion EnableExtensions
 
@@ -304,8 +300,6 @@ IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
-MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"
 ECHO Off
 SETLOCAL EnableDelayedExpansion EnableExtensions
 
@@ -353,8 +347,6 @@ IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
-MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"
 ECHO Off
 SETLOCAL EnableDelayedExpansion EnableExtensions
 
@@ -408,8 +400,6 @@ IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
-MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"
 ECHO Off
 SETLOCAL EnableDelayedExpansion EnableExtensions
 
@@ -460,8 +450,6 @@ IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
-MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"
 ECHO Off
 SETLOCAL EnableDelayedExpansion EnableExtensions
 
@@ -517,8 +505,6 @@ IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
-MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"
 ECHO Off
 SETLOCAL EnableDelayedExpansion EnableExtensions
 
@@ -573,8 +559,6 @@ IF EXIST "$(OutDir)..\..\include\$(ProjectName)" (
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
-MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt"
 ECHO Off
 SETLOCAL EnableDelayedExpansion EnableExtensions
 
