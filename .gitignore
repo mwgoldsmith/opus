@@ -58,7 +58,6 @@ doc/doxygen-build.stamp
 doc/html
 doc/latex
 doc/man
-*.vcxproj.user
 opus.sdf
 opus.suo
 package_version
@@ -78,5 +77,9 @@ silk/float/x64
 src/Debug
 src/Release
 src/x64
-*.opendb
+
 .vs/
+*.VC.db
+*.opendb
+*.sdf
+*.vcxproj.user
